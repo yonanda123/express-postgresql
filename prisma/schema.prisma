@@ -12,8 +12,22 @@ datasource db {
 
 model Product {
   id Int @id @default(autoincrement())
-  name String
+  ProductName String
   price Int
   description String
   image String
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  username String
+  email String @unique
+  password String
+}
+
+model Customer {
+  id Int @id@default(autoincrement())
+  CustomerName String
+  address String
+  phone String
 }

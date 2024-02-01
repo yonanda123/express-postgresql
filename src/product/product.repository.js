@@ -18,7 +18,7 @@ const findProductById = async (id) => {
 const insertProduct = async (newProduct) => {
   const product = await prisma.product.create({
     data: {
-      name: newProduct.name,
+      ProductName: newProduct.ProductName,
       price: newProduct.price,
       description: newProduct.description,
       image: newProduct.image,
@@ -42,7 +42,7 @@ const updateProduct = async (id, productData) => {
       id,
     },
     data: {
-      name: productData.name,
+      ProductName: productData.ProductName,
       price: productData.price,
       description: productData.description,
       image: productData.image,
